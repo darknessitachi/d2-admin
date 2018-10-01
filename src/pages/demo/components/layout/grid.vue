@@ -11,7 +11,7 @@
         @move="moveHandler"
         @resized="resizedHandler"
         @moved="movedHandler">
-        <el-card shadow="never">
+        <el-card shadow="never" class="page_card">
           <el-tag size="mini" type="info" slot="header">Card {{item.i}}</el-tag>
           <template v-if="item.i === '0'">
             <div class="d2-mb">拖拽卡片调整位置</div>
@@ -30,14 +30,14 @@ export default {
     return {
       layout: {
         layout: [
-          {'x': 0, 'y': 0, 'w': 4, 'h': 10, 'i': '0'},
-          {'x': 4, 'y': 0, 'w': 2, 'h': 5, 'i': '1'},
-          {'x': 6, 'y': 0, 'w': 4, 'h': 5, 'i': '2'},
-          {'x': 10, 'y': 0, 'w': 2, 'h': 10, 'i': '3'},
-          {'x': 4, 'y': 5, 'w': 4, 'h': 5, 'i': '4'},
-          {'x': 8, 'y': 5, 'w': 2, 'h': 5, 'i': '5'},
-          {'x': 0, 'y': 10, 'w': 8, 'h': 5, 'i': '6'},
-          {'x': 8, 'y': 10, 'w': 4, 'h': 5, 'i': '7'}
+          { 'x': 0, 'y': 0, 'w': 4, 'h': 10, 'i': '0' },
+          { 'x': 4, 'y': 0, 'w': 2, 'h': 5, 'i': '1' },
+          { 'x': 6, 'y': 0, 'w': 4, 'h': 5, 'i': '2' },
+          { 'x': 10, 'y': 0, 'w': 2, 'h': 10, 'i': '3' },
+          { 'x': 4, 'y': 5, 'w': 4, 'h': 5, 'i': '4' },
+          { 'x': 8, 'y': 5, 'w': 2, 'h': 5, 'i': '5' },
+          { 'x': 0, 'y': 10, 'w': 8, 'h': 5, 'i': '6' },
+          { 'x': 8, 'y': 10, 'w': 4, 'h': 5, 'i': '7' }
         ],
         colNum: 12,
         rowHeight: 30,
@@ -104,7 +104,7 @@ export default {
     background-color: $color-bg;
     border-radius: 4px;
     margin: -10px;
-    .el-card {
+    .page_card {
       height: 100%;
       @extend %unable-select;
     }
